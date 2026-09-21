@@ -9,7 +9,7 @@ function Header() {
     const [search, setSearch] = useState(false);
     const [value, setValue] = useState('');
     const categories = [...new Set(listJson.slice(0, 5).map((item) => item.category))];
-    const submit = () => value && navigate(`/search?value=${encodeURIComponent(value)}`);
+    const submit = () => { if (!value) return; setSearch(false); setMenu(false); document.documentElement.style.overflowY = 'auto'; navigate(`/search?value=${encodeURIComponent(value)}`); };
     const toggleMenu = () => { const next = !menu; setMenu(next); setSearch(false); document.documentElement.style.overflowY = next ? 'hidden' : 'auto'; };
     const toggleSearch = () => { const next = !search; setSearch(next); setMenu(false); document.documentElement.style.overflowY = next ? 'hidden' : 'auto'; };
     const selectCategory = (category) => { setMenu(false); setSearch(false); document.documentElement.style.overflowY = 'auto'; navigate(`/classify?type=${category}`); };
