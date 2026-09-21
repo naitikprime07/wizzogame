@@ -821,3 +821,8 @@ main {
 	width: calc(100% - 20px);
    }
 }
+
+/* Reserve space for game thumbnails (4:3) so the layout does not shift while images load */
+.smallList img {
+	aspect-ratio: 4 / 3;
+}
