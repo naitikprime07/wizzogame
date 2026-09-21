@@ -284,17 +284,6 @@ main{
 		margin-left: 15px;
 	}
 	 
-	@keyframes jiantous {
-		0%{
-			transform: translateX(10px);
-		};
-		50%{
-			transform: translateX(20px);
-		};
-		100%{
-			transform: translateX(10px);
-		}
-	}
 	
 	.jiantou{
 		width: auto !important;
@@ -421,26 +410,8 @@ main{
 		animation: loading 1s linear infinite;
 	  }
 	
-	  @keyframes loading {
-		to {
-		  transform: rotate(360deg);
-		}
-	  }
 	
 	
-	@keyframes playBtn {
-		0% {
-			transform: scale(0.88);
-		}
-	
-		50% {
-			transform: scale(1.2);
-		}
-	
-		100% {
-			transform: scale(0.88);
-		}
-	}
 	
 	
 	
@@ -785,10 +756,10 @@ main{
 @keyframes jiantous {
 	0%{
 		transform: translateX(10px);
-	};
+	}
 	50%{
 		transform: translateX(20px);
-	};
+	}
 	100%{
 		transform: translateX(10px);
 	}
